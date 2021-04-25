@@ -1,0 +1,76 @@
+.nav {
+    position: fixed;
+    transform: translateX(100%);
+    width: 100%;
+    z-index: 50;
+    transition: transform .3s ease;
+    
+    @media (min-width: 780px) {
+        position: inherit;
+        transform: inherit;
+    }
+
+    &__link {
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        @media (min-width: 780px) {
+            flex-direction: row;
+            align-items: center;
+        }
+
+        &-item {
+            color: $white-color;
+            font-size: 18px;
+            line-height: 20px;
+            text-transform: uppercase;
+            padding: 15px 5px;
+            text-align: right;
+            cursor: pointer;
+            box-shadow: 5px 5px 5px transparent;
+            position: relative;
+            top: 3px;
+
+            &:active, &:hover, &:focus {
+                background-color: $small-grey-text;
+                transition: all .6s;
+                color: $white-color;
+                top: 0;
+                box-shadow: 2px 2px 2px $small-grey-text;
+            }
+
+            @media (min-width: 780px) {
+                color: $small-grey-text;
+                font-size: 13px;
+                line-height: 100px;
+                width: 100%;
+                text-align: center;
+                padding: inherit;
+                transition: all .6s;
+                position: inherit;
+                box-shadow: inherit;
+
+                &:active, &:hover, &:focus {
+                    background-color: $green-color;
+                    transition: all .6s;
+                    color: $white-color;
+                    box-shadow: inherit;
+                }
+            }
+        }
+    }
+    &--burger {
+        transform: translateX(0);
+        transition: transform .3s ease;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        margin-top: 100px;
+        padding: 15px;
+        background-color: $green-color;
+    }
+} 

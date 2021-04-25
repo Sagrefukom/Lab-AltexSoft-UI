@@ -1,0 +1,22 @@
+.social {
+
+    &__icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        background-color: #383838;
+        border-radius: 50%;
+    }
+    &__link {
+        cursor: pointer;
+        
+        &-item {
+            font-size: 12px;
+            line-height: 14px;
+            color: $green-color;
+            padding-left: 10px;
+        }
+    }
+}

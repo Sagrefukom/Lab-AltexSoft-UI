@@ -1,0 +1,35 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    max-width: 920px;
+    padding: 0 20px;
+    border-bottom: 1px solid $green-color;
+    border-top: 5px solid #a7c353;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 50;
+
+    @media(min-width:900px) {
+        left: initial;
+    }
+
+    &__left {
+        width: 300px;
+    }
+    &__right {
+        display: flex;
+
+        @media(min-width:780px) {
+            width: 100%;
+        }
+    }
+    
+    &__burger {
+        position: relative;
+    }
+}
