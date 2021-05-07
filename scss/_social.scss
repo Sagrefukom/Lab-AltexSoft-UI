@@ -11,12 +11,33 @@
     }
     &__link {
         cursor: pointer;
+        position: relative;
         
         &-item {
             font-size: 12px;
             line-height: 14px;
             color: $green-color;
             padding-left: 10px;
+
+            &::after {
+                content: "";
+                display: block;
+                width: 0;
+                border-bottom: 3px solid $green-color;
+                position: absolute;
+                bottom: -7px;
+                left: 50%;
+                transition: .3s;
+            }
+            &:hover::after {
+                content: "";
+                display: block;
+                width: 100%;
+                border-bottom: 3px solid;
+                position: absolute;
+                bottom: -7px;
+                left: 0;
+            }
         }
     }
 }

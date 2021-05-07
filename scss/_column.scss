@@ -81,11 +81,32 @@
         display: flex;
         justify-content: flex-end;
         align-items: center;
+        position: relative;
 
         &-item {
             font-size: 20px;
             line-height: 20px;
             color: $green-color;
+
+            &::after {
+                content: "";
+                display: block;
+                width: 0;
+                border-bottom: 3px solid $green-color;
+                position: absolute;
+                bottom: -5px;
+                left: 50%;
+                transition: .3s;
+            }
+            &:hover::after {
+                content: "";
+                display: block;
+                width: 50%;
+                border-bottom: 3px solid;
+                position: absolute;
+                bottom: -5px;
+                left: 50%;
+            }
 
             @media(min-width:992px) {
                 font-size: 13px;
@@ -125,6 +146,7 @@
                 line-height: 20px;
                 color: $small-grey-text;
                 padding-bottom: 5px;
+                position: relative;
 
                 @media(min-width:992px) {
                     font-size: 12px;
@@ -165,6 +187,26 @@
         }
         &-email {
             color: $green-color;
+
+            &::after {
+                content: "";
+                display: block;
+                width: 0;
+                border-bottom: 3px solid $green-color;
+                position: absolute;
+                bottom: -7px;
+                left: 50%;
+                transition: .3s;
+            }
+            &:hover::after {
+                content: "";
+                display: block;
+                width: 100%;
+                border-bottom: 3px solid;
+                position: absolute;
+                bottom: -7px;
+                left: 0;
+            }
         }
     }
 }

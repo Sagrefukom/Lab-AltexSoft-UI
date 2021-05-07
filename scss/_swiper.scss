@@ -44,27 +44,42 @@
             }
 
             &::after {
-                color: #a7c353;
-                background-color: #000;
-                border: 2px solid #a7c353;
-                border-radius: 50%;
-                padding: 15px;
-                font-size: 15px;
+                display: none;
             }
+            // &::after {
+            //     color: #a7c353;
+            //     background-color: #000;
+            //     border: 2px solid #a7c353;
+            //     border-radius: 50%;
+            //     padding: 15px;
+            //     font-size: 15px;
+            // }
 
-            @media (min-width:485px) {
-                &::after {
-                    color: #a7c353;
-                    background-color: #000;
-                    border: 2px solid #a7c353;
-                    border-radius: 50%;
-                    padding: 20px;
-                    font-size: 25px;
-                }
-            }
+            // @media (min-width:485px) {
+            //     &::after {
+            //         color: #a7c353;
+            //         background-color: #000;
+            //         border: 2px solid #a7c353;
+            //         border-radius: 50%;
+            //         padding: 20px;
+            //         font-size: 25px;
+            //     }
+            // }
         }
         &-prev {
             left: 20px;
+
+            &_item {
+                border-radius: 25px;
+                position: relative;
+                top: 0px;
+                box-shadow: 3px 3px 3px $green-color;
+
+                &:active {
+                    top: 3px;
+                    box-shadow: 1px 1px 1px $green-color;
+                }
+            }
 
             @media (min-width:485px) {
                 left: 40px;
@@ -72,6 +87,18 @@
         }
         &-next {
             right: 20px;
+
+            &_item {
+                border-radius: 25px;
+                position: relative;
+                top: 0px;
+                box-shadow: -3px 3px 3px $green-color;
+
+                &:active {
+                    top: 3px;
+                    box-shadow: -1px 1px 1px $green-color;
+                }
+            }
 
             @media (min-width:485px) {
                 right: 40px;
